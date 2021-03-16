@@ -220,6 +220,11 @@
 <p>Python 教學: <a href="https://python-doc-tw.github.io/tutorial/index.html">https://python-doc-tw.github.io/tutorial/index.html</a></p>
 <p>網頁上的 Python - Brython: <a href="https://www.brython.info/static_doc/en/intro.html">https://www.brython.info/static_doc/en/intro.html</a> (解譯式)</p>
 <p>網頁上的 Python GUI- Flexx: <a href="https://flexx.readthedocs.io/en/stable/">https://flexx.readthedocs.io/en/stable/</a> (轉譯式)</p>
+<p>開放電子書:</p>
+<p style="padding-left: 30px;"><a href="https://www.liaoxuefeng.com/wiki/1016959663602400">Python 教程</a> (中文)</p>
+<p style="padding-left: 30px;"><a href="http://www.pythondoc.com/pythontutorial3/index.html">Python 入門指南</a> (中文)</p>
+<p style="padding-left: 30px;"><a href="/downloads/how-to-code-in-python.pdf">how-to-code-in-python.pdf</a> (英文)</p>
+<p style="padding-left: 30px;"><a href="https://www.py4e.com/book.php">https://www.py4e.com/book.php</a> (英文與小部分完成中文翻譯)</p>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -1837,21 +1842,16 @@ from browser import document as doc
 import beditor
 # 利用 beditor.py 中的 editor 類別建立案例, 對應到 bs1
 bs1 = beditor.editor("""# Python program for implementation of Bubble Sort
-'''
-泡沫排序演算法的運作如下：
-    比較相鄰的元素。如果第一個比第二個大，就交換他們兩個。
-    對每一對相鄰元素作同樣的工作，從開始第一對到結尾的最後一對。這步做完後，最後的元素會是最大的數。
-    針對所有的元素重複以上的步驟，除了最後一個。
-    持續每次對越來越少的元素重複上面的步驟，直到沒有任何一對數字需要比較。
-'''
+
 def bubbleSort(arr):
     n = len(arr)
  
     # Traverse through all array elements
-    for i in range(n):
- 
+    for i in range(n-1):
+    # range(n) also work but outer loop will repeat one time more than needed.
+        
         # Last i elements are already in place
-        for j in range(0, n-i-1):
+        for j in range(n-i-1):
  
             # traverse the array from 0 to n-i-1
             # Swap if the element found is greater
@@ -1859,11 +1859,11 @@ def bubbleSort(arr):
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
        
-        print(arr)
+        print(str(i+1)+"個已經排好", "共比較"+str(j+1)+"次", arr)
  
 # Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 5, 90]
- 
+arr = [90, 64, 34, 25, 12, 22, 11, 5, 3]
+print("original", arr)
 bubbleSort(arr)
  
 print ("Sorted array is:")
