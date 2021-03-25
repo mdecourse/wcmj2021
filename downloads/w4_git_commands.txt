@@ -1,0 +1,16 @@
+git config --global user.name "50933108"
+
+git config --global user.email "50933108@gm.nfu.edu.tw"
+
+git config --global http.proxy http://[2001:288:6004:17::69]:3128
+
+git clone --recurse-submodules https://github.com/50933108/50933108.github.io.git
+
+cd tmp
+cd 50933108.github.io
+cms
+
+https://localhost:9443
+
+login 密碼為 admin
+

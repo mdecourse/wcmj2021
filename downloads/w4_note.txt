@@ -1,0 +1,21 @@
+網際內容管理課程目的
+    Work from home
+    Work from everywhere
+Git
+    Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems).
+
+Github
+    GitHub, Inc. is a provider of Internet hosting for software development and version control using Git.
+
+可攜程式系統
+    portable programming system
+    1. git config 設定 (3 種設定, 包括 
+    user.name, user.email, http.proxy)
+    2. git add, commit, push, status
+    3. cms.bat 與 acp.bat
+    4. 動態網站編輯 (變更 config/content.htm) ,
+    轉為靜態網站內容 (content 目錄)
+
+wcmj2021 上課網路環境
+    IPv6
+    IPv4
