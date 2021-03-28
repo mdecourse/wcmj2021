@@ -1,0 +1,215 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>WCMJ2021</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>WCMJ2021 五專網際內容管理</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">WCMJ2021 五專網際內容管理</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='三道牆理論.html'>三道牆理論</a><li><a href='Blogger.html'>Blogger</a><li><a href='個人電腦.html'>個人電腦</a><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='Switch.html'>Switch</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Topic 1.html'>Topic 1</a><li><a href='W2-W3.html'>W2-W3</a><li class='has-children'><a href='分組專題.html'>分組專題</a><ul class='dropdown'><li><a href='Python.html'>Python</a></li></ul><li><a href='W5.html'>W5</a><li><a href='W7.html'>W7</a><li><a href='Topic2.html'>Topic2</a></li></ul><li class='has-children'><a href='Google.html'>Google</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a><li><a href='Oauth2.html'>Oauth2</a><li><a href='Calendar API.html'>Calendar API</a><li><a href='Drive API.html'>Drive API</a></li></ul><li><a href='Web Site.html'>Web Site</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">W2-W3 << <a href='W2-W3.html'>Previous</a> <a href='Python.html'>Next</a> >> Python<br /><h1>分組專題</h1>
+<h4>W4</h4>
+<p>截至目前為止, 我們已經介紹如何利用學校所配發的 @gm 電子郵件帳號建立在 <a href="https://www.blogger.com">https://www.blogger.com</a> 的<span style="background-color: #ffff99;">個人網誌</span>以及<span style="background-color: #ffff99;">分組網誌</span>, 也說明如何在 <a href="https://github.com/">https://github.com/</a> 利用 <span style="background-color: #ccffcc;">帳號.github.io</span> 倉儲建立<span style="background-color: #ffff99;">個人網站</span>, 接下來將以每組六人為一個單位進行網際內容的閱讀以及整理, 以下為第九週期中考之前, 希望各組完成閱讀, 討論並整理的相關內容:</p>
+<ol>
+<li>與計算機概論與電腦網路有關的內容整理 - <a href="./../downloads/Introduction_ to_computers_10_pages.pdf">Intro to computer1</a>, <a href="./../downloads/intro to computers.pdf">2</a>, <a href="./../downloads/ComputerNetworks_936_pages.pdf">computer networks</a>, (<a href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">ntu ee course</a>)</li>
+<li>與 Google 發展有關的內容整理 - 有關 Google 的發展歷史: <a href="https://en.wikipedia.org/wiki/Google">https://en.wikipedia.org/wiki/Google</a>, 請各組組員仔細閱讀這份資料後, 將認為重點的資料放入各學員的 blogger 網誌以及個人網站中.</li>
+<li><a href="https://developers.google.com/blogger">https://developers.google.com/blogger</a> </li>
+</ol>
+<p>說明如何在 Github 帳號下利用 "帳號.github.io" 倉儲建立網頁. 基本的建置流程為:</p>
+<ol>
+<li>登入 Github 帳號</li>
+<li>連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 後點擊 Use this template, 以此倉儲內容作為樣板, 所建立的倉儲即可透過 Github Pages 的架構, 產生對應的個人網頁</li>
+<li>假如再使用 Brython 可以在網頁中建立一個基本的網際 Python 練習頁面</li>
+</ol>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/4QMx0_FIGvM" title="YouTube video player" width="560"></iframe></p>
+<h4>W10-W18</h4>
+<ol>
+<li>網際內容管理應用 I - <a href="https://brython.info/">Brython</a>, <a href="https://glowscript.org/">Glowsript</a></li>
+<li>網際內容管理應用 II - <a href="https://fossil-scm.org">Fossil SCM</a></li>
+<li>進展中的網際與數位未來 - 一張<a href="https://www.nbcnews.com/business/business-news/digital-artwork-sells-record-60-million-christie-s-first-nft-n1260544">六千九百萬美元的數位圖檔</a>, <a href="https://www.ibm.com/tw-zh/blockchain/what-is-blockchain">What is Blockchain?</a>, <a href="./../downloads/2019-08專題報告-區塊鏈plus時代的社經變革與創新思維.pdf">區塊鏈專題報告</a>, <a href="https://www.moea.gov.tw/MNS/doit/industrytech/IndustryTech.aspx?menu_id=13545&amp;it_id=277">應用範例</a>, <a href="./../downloads/2018_中國區塊鍊產業白皮書.pdf">中國區塊練產業白皮書</a>, <a href="https://link.springer.com/book/10.1007/978-3-030-40142-9">Build Your Own Blockchain</a></li>
+<li>Robotics 簡介與應用 - <a href="http://mde.tw/wcmj2021/content/W7.html">http://mde.tw/wcmj2021/content/W7.html</a> (<a href="https://robodk.com/">RoboDK</a>, <a href="https://cyberbotics.com/">Webots</a>, <a href="https://robotbenchmark.net/">Robotbentchmark</a> 與 Python, 利用 Python 與 OpenGL <a href="https://github.com/mdecourse/RobotSimulator/discussions/1">開發 robot simulator</a>)</li>
+</ol>
+<h4>參考資料:</h4>
+<p style="padding-left: 30px;"><a href="http://pyopengl.sourceforge.net/context/tutorials/index.html">http://pyopengl.sourceforge.net/context/tutorials/index.html</a></p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-5857-6">Beginning PyQt ebook</a></p>
+<p style="padding-left: 30px;"><a href="https://www.glprogramming.com/red/">https://www.glprogramming.com/red/</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/robodk/welding/PyOpenGL.pdf">PyOpenGL.pdf</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/robodk/welding/learningopengl.pdf">learningopengl.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://stackabuse.com/advanced-opengl-in-python-with-pygame-and-pyopengl/">https://stackabuse.com/advanced-opengl-in-python-with-pygame-and-pyopengl/</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.huihoo.com/pyopengl/python-for-opengl.html">https://docs.huihoo.com/pyopengl/python-for-opengl.html</a> </p><br />W2-W3 << <a href='W2-W3.html'>Previous</a> <a href='Python.html'>Next</a> >> Python</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
