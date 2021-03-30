@@ -2063,6 +2063,27 @@ var width = window.innerWidth;
 <p><a href="/downloads/ComputerNetworks_936_pages.pdf">ComputerNetworks_936_pages.pdf</a></p>
 <h4>2030 台灣科技願景:</h4>
 <p style="padding-left: 30px;"><a href="/downloads/taiwan_2030_tech_vision.pdf">taiwan_2030_tech_vision.pdf</a></p><h2>W6</h2>
+<h4>KMOLab 使用的機電資模擬套件:</h4>
+<ol>
+<li><a href="https://robodk.com">RoboDK</a> (<a href="https://robodk.com/pricing">Free Trial version</a>) OBS + Youtube Live + Web based Python API</li>
+<li><a href="https://www.coppeliarobotics.com">CoppeliaSim</a> (<a href="https://www.coppeliarobotics.com/helpFiles/en/licensing.htm">Free Educational version</a>) Image sensor streamming + Web based Python remote API</li>
+<li><a href="https://cyberbotics.com/">Webots</a> (<a href="https://cyberbotics.com/doc/guide/webots-license-agreement">Free Apache 2.0 version</a>) <a href="https://www.cyberbotics.com/doc/guide/web-interface">Web based ready</a></li>
+</ol>
+<h4>離線模擬的準確性:</h4>
+<p style="padding-left: 30px;"><a href="https://robodk.com/blog/robot-calibration-offline-programming/">https://robodk.com/blog/robot-calibration-offline-programming/</a></p>
+<h4>10 Causes of Inaccurate Robot Programming:</h4>
+<ol>
+<li>Lack of calibration — The most important factor has got to be calibration, or lack of it. If your cell is not calibrated, you are setting yourself up to fail. I’ll cover calibration in more detail in the rest of this article.</li>
+<li>Inaccurate robot model — Your offline program is only as good as your robot model. Over the years I have spent hours and hours building various robot models for simulators. In the process, I have learned this: if you can find an existing, accurate robot model (like the ones in RoboDK’s Robot Library) you’ll save yourself a lot of time and energy. The accuracy of the robot model can be improved using robot calibration.</li>
+<li>Inaccurate cell layout design — Equally important is having an accurate model of the robot’s work cell. This you will almost certainly have to build yourself, so check and double check that it is an accurate representation of the real workstation.</li>
+<li>Bad post-processor — The post-processor turns the program you have created in offline programming into code which the robot can use. If you are using a good post-processor (such as those included in RoboDK) this is very simple. However, if you have to write your own post-processor for any reason, it could introduce inaccuracies if it is not programmed correctly.</li>
+<li>Distortions in the real world — The real world is never as clean as a simulated environment. The robot links will be slightly different sizes, its joint angles will be slightly different from the readings, etc. This is why calibration is so important.</li>
+<li>Sensor inaccuracy — Sensors are used to detect the difference between the theoretical values and real robot values. The simplest example is a potentiometer to detect the real position of a robot joint. A more complex example is a 3D vision setup. However, sensors are also physical devices sensors so can also introduce errors.</li>
+<li>Unhelpful product design — Some objects are harder to manipulate with a robot than others. Even if your robot program is entirely accurate, you may see inaccuracies in the robot’s actions if the objects it manipulates are not designed with robots in mind.</li>
+<li>Different coordinate systems — Robot manufacturers sometimes use different coordinate systems. This can cause inaccuracies if the wrong system is used or if errors are introduced when converting between different systems.</li>
+<li>Wrong reference frame — All positions in a robot program are given relative to a reference frame. Sometimes this is a fixed frame, e.g. the robot’s base, but you can also make it relative to another frame, like the manipulated object. Poorly calibrating this frame can cause inaccuracies.</li>
+<li>Lack of testing — Test your program. Even when your cell is properly calibrated, you should always test the program thoroughly in software and then double check it on the real robot before you go into production.</li>
+</ol>
 <h4>機電資系統模擬套件:</h4>
 <ol>
 <li>RoboDK (Free Trial) - OBS + Youtube Live + Web based Python</li>
@@ -2086,7 +2107,9 @@ var width = window.innerWidth;
 <p>Draw:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/dkRaf5n3OKs" title="YouTube video player" width="560"></iframe></p>
 <p>Pick and Place:</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/45J9Rr1VOt0" title="YouTube video player" width="560"></iframe></p><h2>W7</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/45J9Rr1VOt0" title="YouTube video player" width="560"></iframe></p>
+<p>參考資料:</p>
+<p style="padding-left: 30px;"><a href="http://mde.tw/cad2020/content/Robot.html">http://mde.tw/cad2020/content/Robot.html</a></p><h2>W7</h2>
 <p>Course notes:</p>
 <p style="padding-left: 30px;"><a href="https://ocw.mit.edu/courses/mechanical-engineering/2-12-introduction-to-robotics-fall-2005/lecture-notes/">Introduction to robotics</a></p>
 <p style="padding-left: 30px;"><a href="http://hades.mech.northwestern.edu/index.php/Modern_Robotics">http://hades.mech.northwestern.edu/index.php/Modern_Robotics</a></p>
