@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='三道牆理論.html'>三道牆理論</a><li><a href='個人電腦.html'>個人電腦</a><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='Switch.html'>Switch</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Topic 1.html'>Topic 1</a><li><a href='W2-W3.html'>W2-W3</a><li class='has-children'><a href='分組專題.html'>分組專題</a><ul class='dropdown'><li><a href='Python.html'>Python</a></li></ul><li><a href='W5.html'>W5</a><li><a href='W7.html'>W7</a><li><a href='Topic2.html'>Topic2</a></li></ul><li class='has-children'><a href='Google.html'>Google</a><ul class='dropdown'><li><a href='Oauth2.html'>Oauth2</a><li><a href='Calendar API.html'>Calendar API</a><li><a href='Drive API.html'>Drive API</a></li></ul><li><a href='Web Site.html'>Web Site</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='三道牆理論.html'>三道牆理論</a><li><a href='個人電腦.html'>個人電腦</a><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='Switch.html'>Switch</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Topic 1.html'>Topic 1</a><li><a href='W2-W3.html'>W2-W3</a><li class='has-children'><a href='分組專題.html'>分組專題</a><ul class='dropdown'><li><a href='Python.html'>Python</a></li></ul><li><a href='W5.html'>W5</a><li class='has-children'><a href='W7.html'>W7</a><ul class='dropdown'><li><a href='Call for Code.html'>Call for Code</a></li></ul><li><a href='Topic2.html'>Topic2</a></li></ul><li class='has-children'><a href='Google.html'>Google</a><ul class='dropdown'><li><a href='Oauth2.html'>Oauth2</a><li><a href='Calendar API.html'>Calendar API</a><li><a href='Drive API.html'>Drive API</a></li></ul><li><a href='Web Site.html'>Web Site</a></li>
                       </ul>
                 </nav>
               </div>
@@ -140,6 +140,37 @@ img.add_border {
 <li>與計算機概論與電腦網路有關的內容整理 - <a href="./../downloads/Introduction_ to_computers_10_pages.pdf">Intro to computer1</a>, <a href="./../downloads/intro to computers.pdf">2</a>, <a href="./../downloads/ComputerNetworks_936_pages.pdf">computer networks</a>, (<a href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">ntu ee course</a>)</li>
 <li>利用 <a href="https://brython.info/">Brython</a> 學習簡單的 Python 語法. (<a href="https://www.practicepython.org/exercises/">基本程式練習</a>)</li>
 </ol>
+<p>sort1.py</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># Python program for implementation of Bubble Sort
+# 說明
+
+def bubbleSort(arr):
+    n = len(arr)
+ 
+    # Traverse through all array elements
+    for i in range(n-1):
+    # range(n) also work but outer loop will repeat one time more than needed.
+        
+        # Last i elements are already in place
+        for j in range(n-i-1):
+ 
+            # traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] &gt; arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+       
+        print(str(i+1)+"個已經排好", "共比較"+str(j+1)+"次", arr)
+ 
+# Driver code to test above
+arr = [90, 64, 34, 25, 12, 22, 11, 5, 3]
+print("original", arr)
+bubbleSort(arr)
+ 
+print ("Sorted array is:")
+for i in range(len(arr)):
+    print ("%d" %arr[i])
+</pre>
 <p>說明如何在 Github 帳號下利用 "帳號.github.io" 倉儲建立網頁. 基本的建置流程為:</p>
 <ol>
 <li>登入 Github 帳號</li>

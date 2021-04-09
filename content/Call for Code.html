@@ -1,0 +1,228 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>WCMJ2021</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>WCMJ2021 五專網際內容管理</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">WCMJ2021 五專網際內容管理</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='三道牆理論.html'>三道牆理論</a><li><a href='個人電腦.html'>個人電腦</a><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='Switch.html'>Switch</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Topic 1.html'>Topic 1</a><li><a href='W2-W3.html'>W2-W3</a><li class='has-children'><a href='分組專題.html'>分組專題</a><ul class='dropdown'><li><a href='Python.html'>Python</a></li></ul><li><a href='W5.html'>W5</a><li class='has-children'><a href='W7.html'>W7</a><ul class='dropdown'><li><a href='Call for Code.html'>Call for Code</a></li></ul><li><a href='Topic2.html'>Topic2</a></li></ul><li class='has-children'><a href='Google.html'>Google</a><ul class='dropdown'><li><a href='Oauth2.html'>Oauth2</a><li><a href='Calendar API.html'>Calendar API</a><li><a href='Drive API.html'>Drive API</a></li></ul><li><a href='Web Site.html'>Web Site</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">W7 << <a href='W7.html'>Previous</a> <a href='Topic2.html'>Next</a> >> Topic2<br /><h1>Call for Code</h1>
+<p>Technology:</p>
+<p style="padding-left: 30px;">Python and iot:</p>
+<p style="padding-left: 60px;"><a href="https://github.com/IBM-Cloud/python-iot-raspberry-pi">https://github.com/IBM-Cloud/python-iot-raspberry-pi</a></p>
+<p style="padding-left: 30px;">Python and SQL:</p>
+<p style="padding-left: 60px;"><a href="https://github.com/IBM-Cloud/sql-query-clients">https://github.com/IBM-Cloud/sql-query-clients</a></p>
+<p style="padding-left: 60px;"><a href="https://github.com/IBM-Cloud/github-traffic-stats">https://github.com/IBM-Cloud/github-traffic-stats</a></p>
+<p style="padding-left: 30px;">Flutter and Flask:</p>
+<p style="padding-left: 60px;"><a href="https://github.com/mohammedhashim44/Flutter-Flask-Login">https://github.com/mohammedhashim44/Flutter-Flask-Login</a></p>
+<p style="padding-left: 30px;">Flutter and Raspberry Pi:</p>
+<p style="padding-left: 60px;"><a href="https://github.com/ardera/flutter-pi">https://github.com/ardera/flutter-pi</a></p>
+<p style="padding-left: 30px;"><a href="https://www.ansible.com/">https://www.ansible.com/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/IBM-Cloud/clouddatabases-redis-helloworld-python">https://github.com/IBM-Cloud/clouddatabases-redis-helloworld-python</a></p>
+<p style="padding-left: 30px;">Bluemix:</p>
+<p style="padding-left: 60px;"><a href="https://blog.cavedu.com/2016/05/15/ibm-bluemix-%E7%AC%AC%E9%9B%B6%E7%AB%A0-ibm-bluemix-%E4%BB%8B%E7%B4%B9/">https://blog.cavedu.com/2016/05/15/ibm-bluemix-%E7%AC%AC%E9%9B%B6%E7%AB%A0-ibm-bluemix-%E4%BB%8B%E7%B4%B9/</a> </p>
+<p><a href="https://www.ibm.com/blogs/think/tw-zh/2021/03/24/taiwan-ptech-students-joins-callforcodeptechchallenge/?social_post=4649485328&amp;linkId=114220755">2021.03.24</a></p>
+<p>以下為新聞稿:</p>
+<blockquote>
+<p>近幾年，全球人類面臨前所未有的生存危機，<span style="background-color: #ffff99;">極端氣候導致的天災更加頻繁</span>，從 2020 年更有新冠肺炎在全球肆虐，顛覆所有人的生活方式，也重組了商業模式。IBM 一直致力於<span style="background-color: #ffff99;">環境永續與災害預防</span>，自 2018 年起攜手 Call for Code 組織、聯合國與 Linux 教育基金會，舉行「Call for Code Challenge 全球開發者大賽」。此競賽號召全球開發者利用 IBM 提供的免費資源與開放數據，聯合組隊，提交針對因應氣候變遷、水資源和打擊飢荒的解決方案。<br/><br/><br/>今年更首度推出「Call for Code P-TECH Challenge」，全球 16 個國家與地區未滿 18 歲的 P-TECH 教育模式學生，將組隊貢獻他們的 STEM 專長，化身開發人員，呼應 IBM 的號召，一同解決攸關人類永續生存的議題！在台灣，來自台北科技大學、高雄科技大學、虎尾科技大學與仁德醫專四所 P-TECH 學校學生也將組隊參賽，甚至組織跨校、跨區的團隊，與來自全球 16 國的 P-TECH 學生同台競技，一同實踐科技向善的精神！<br/><br/>「Call for Code P-TECH Challenge」 考驗 P-TECH 學生創新能力、技術力與團隊合作能力<br/><br/>IBM 自 2011 年推動 P-TECH 教育模式（Pathways in Technology Early College High Schools）以來，一直致力於人才培育、串連在地產業與國際資源，為學生們規劃技能與職涯藍圖，以期幫助學生培養職場所需軟硬實力與數位技能，未來可順利接軌職場。基於希望學生運用所學與發揮團隊合作，一起為社會作出有正向積極的貢獻，IBM 今年首次推出「Call for Code P-TECH Challenge」，P-TECH 學生將以「氣候變遷」或「新冠肺炎」作為挑戰主軸，從現在至 6 月底，參賽學生將在設計思考工作坊中，進行主題發想、收斂概念、制訂行動計畫，運用 IBM 所提供的開放數據與模組進行程式編碼（如 Red Hat OpenShift、IBM Cloud、IBM Watson、IBM Blockchain、來自 IBM Weather Company 的大氣資料），向挑戰賽導師諮詢技術內容，並在 6 月底前舉行的 48 小時線上駭客松後提交最終解決方案。全球優勝團隊除了豐厚獎品外，將可擁有額外 4 週時間繼續發展專案並參與項目開發，並將專案引薦給 IBM 高階主管！</p>
+<p>兩岸三地啟動 「Call for Code P-TECH Challenge」<br/><br/>「Call for Code P-TECH Challenge」已在這兩週陸續於兩岸三地正式啟動。在 3/23、3/24 的台灣啟動大會上，不少學生表示期望透過與不同學校、文化背景的成員合作，擦出新火花。臺北科技大學智慧自動化工程科二年級的林宏信同學表示，「雖然可能有語言問題和地理距離，但能運用科技軟體輔助溝通，也是新的一種學習體驗」，而其他同學也對於跨校、跨區組隊和交流躍躍欲試。<br/><br/><br/>身為 2019 年 IBM Developer 倡議者也是 P-TECH 導師的 IBM 大中華軟體研發中心軟體工程師鍾純勝（Vincent Chung）不但親自在啟動大會上為學生說明 IBM 的技術工具和應用外，也鼓勵學生，「選題跟創意發想往往是最耗時、困難的地方，但通常確立有興趣的領域以及想解決的問題後，整個主題及實作內容將會明朗化。只要能懂得使用 IBM 提供的應用程式與服務，不需要非常高的技術門檻，也可以完成很有意義的服務與解決方案。」作為本賽事的倡議者，Vincent 將在賽事期間協助同學認識 IBM 開發者資源，期待看到參賽同學透過創意發想，還有國際舞台的同台競技。不但可以累積寶貴的團隊合作與跨文化學習經驗，也打造出屬於自己、具有應用價值並且可以解決人類生存問題的解決方案。</p>
+</blockquote>
+<p><a href="https://callforcode.org/global-challenge/">https://callforcode.org/global-challenge/</a></p>
+<p><br/>What is the Call for Code Global Challenge?<br/><br/>In the Call for Code Global Challenge, you can join the fight against climate change by building and deploying open source solutions in the cloud. By participating, you’ll build critical skills for yourself and your teams and deploy solutions to help communities across the globe.<br/><br/>Built on open source principles, the Call for Code Global Challenge asks developers and problem solvers to form teams and develop solutions that address specific problems in unique, clearly demonstrable ways. The most successful solutions are those scoped to have the greatest community impact with the smallest technological footprint. Last year’s winner Agrolly is a perfect example, with its mobile application to help small farmers better understand what to plant, based on weather patterns and crop characteristics.</p>
+<p><br/>Three global focus areas<br/><br/>According to the United Nations, “The impacts of climate change are global in scope and unprecedented in scale. Without drastic action today, adapting to these impacts in the future will be more difficult and costly.” Given the far-reaching and devastating effects of climate change, we have divided the 2021 Global Challenge into three sub-themes:</p>
+<p><br/>What is the problem?<br/><br/>Worldwide consumption and production drives the global economy, yet the current use of natural resources is unsustainable. The global material footprint rose nearly 18 percent from 73 billion metric tons in 2010 to 85.9 billion metric tons in 2017, the UN reports.  That’s why Sustainable Development Goal 12 aims to achieve economic growth, sustainable development, and reduce our ecological footprint by changing the way we produce and consume goods and resources.</p>
+<p><br/>How can technology solve the problem?<br/><br/>Technology can help in many ways, from recommendations on energy efficiency to highlighting the carbon footprint of online purchases. The goal is to take into account all phases of resource use to do more and better with less.</p>
+<p><br/>The idea<br/><br/>One of the more pressing challenges in addressing waste and shifting to a more circular economy is the increasing complexity of products.  Electronics are getting smaller and more sophisticated, making recovery and reuse of materials challenging. Product designers should consider how to create products with end-of-life in mind, by reducing the number of components, for example. Communities could benefit from developing infrastructure, policies, and systems to support repair, reuse, and recycling.<br/><br/>To encourage this change, we propose creating a transparent and trustworthy platform for trading resources and knowledge, as well as providing access to a community of experts. This platform will enable producers and consumers to build and buy products in a sustainable way for our society — by reducing waste, increasing the use of recycled materials, and improving the overall repairability of products.<br/><br/>The platform would support the two parties supporting sustainable production with recycled materials: <br/><br/>    A producer or a manufacturer who can find and compare price, quality, and carbon impact of recycled materials while learning about best practices for recyclable processing through a trustworthy, real-time trading platform</p>
+<p><br/>    A recycled material supplier who can sell recycled resources directly to producers through a marketplace at competitive rates</p>
+<p><img caption="false" height="400" src="https://dw1.s81c.com/developer-static-pages/callforcode/en/get-started/climate-change/green-consumption/images/cfc-production-consumption-architecture.png" width="600"/></p>
+<p></p>
+<ol>
+<li>The user interacts with a web application for the marketplace.</li>
+<li>The React app communicates with the back-end APIs.</li>
+<li>The Fastify back end handles data requested by the web app and exposes some public endpoints for material market data through a RESTful API.</li>
+<li>The back end queries Watson Discovery for updated information on materials.</li>
+<li>Discovery manages a collection of recycled and non-recycled material information, such as average prices, carbon impact, and quality. Discovery enriches the data with natural language processing so that it can be more easily indexed.</li>
+<li>Discovery crawls public websites for updates on current material information.</li>
+<li>The back end stores and retrieves information on material that is provided by users in an IBM Cloudant NoSQL database.</li>
+<li>A Kubernetes cluster is used for a scalable, flexible, modern containerized environment.</li>
+<li>New Relic provides Full-Stack Observability and monitoring within the Kubernetes environment</li>
+</ol>
+<p></p>
+<p></p><br />W7 << <a href='W7.html'>Previous</a> <a href='Topic2.html'>Next</a> >> Topic2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
