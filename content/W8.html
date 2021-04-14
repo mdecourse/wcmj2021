@@ -133,35 +133,31 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Python << <a href='Python.html'>Previous</a> <a href='W7.html'>Next</a> >> W7<br /><h1>W5</h1>
-<h4>網際內容管理的使用建議:</h4>
-<ol>
-<li>在雲端上只存放與個人或團隊專業有關的內容 (以學號作為 identity, 除了 <a href="https://www.linkedin.com/">Linkedin</a> 外, 不要使用本名)</li>
-<li>不要將個人生活有關的圖文放到網際空間 (不要使用臉書, 不要使用其他任何雲端社群服務擺放任何個人資料)</li>
-<li>儘量使用瀏覽器查找資料, 每次使用後要刪除暫存檔, 避免使用手機上綁定實名制的 Apps</li>
-</ol>
-<p>這個禮拜開始至 W9, 各小組要將 W1-W4 的教學影片加以整理, 讓每位組員都能在 Blogger 整理自己過去一個多學期的課程學習內容, 以網際內容管理架構, 可攜程式系統及 Github 倉儲與網頁的模式存放內容.</p>
-<p>網際內容管理學習 Check List:</p>
-<ol>
-<li>是否已經建立個人 Blogger?</li>
-<li>是否會使用 Blogger, 新增協同著作者?</li>
-<li>是否會在 Blogger 中使用各種 HTML 標註, 包括加入 Python 程式碼, 嵌入影片檔案等?</li>
-<li>是否會利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 建立個人網頁?</li>
-<li>是否會在個人網站上嵌入網際 Python (<a href="https://brython.info/">Brython</a>) 程式環境?</li>
-<li>是否已經了解所謂的 Bubble Sort Python 程式?</li>
-<li>是否已經會使用 SSH 將改版資料 push 到 Github?</li>
-<li>各組是否已經找到想要研究的網際內容管理相關的分組專案題目?</li>
-</ol>
-<p><a href="./../downloads/2008_Organizing and Managing Personal Electronic Files- A Mechanical Engineer’s Perspective.pdf">2008_Organizing and Managing Personal Electronic Files- A Mechanical Engineer’s Perspective.pdf</a></p>
-<p><a href="./../downloads/how-to-code-in-python.pdf">how-to-code-in-python.pdf</a></p>
-<p><a href="./../downloads/2018_中國區塊鍊產業白皮書.pdf">2018_中國區塊鍊產業白皮書.pdf</a></p>
-<p><a href="./../downloads/2019-08專題報告-區塊鏈plus時代的社經變革與創新思維.pdf">2019-08專題報告-區塊鏈plus時代的社經變革與創新思維.pdf</a></p>
-<p><a href="./../downloads/2020年中小企業白皮書(全)_v1.pdf">2020年中小企業白皮書(全)_v1.pdf</a></p>
-<p><a href="./../downloads/創意台灣 2020 政策白皮書.pdf">創意台灣 2020 政策白皮書.pdf</a></p>
-<p><a href="./../downloads/Blockchain_for_dummies.pdf">Blockchain_for_dummies.pdf</a></p>
-<p><a href="./../downloads/ComputerNetworks_936_pages.pdf">ComputerNetworks_936_pages.pdf</a></p>
-<h4>2030 台灣科技願景:</h4>
-<p style="padding-left: 30px;"><a href="./../downloads/taiwan_2030_tech_vision.pdf">taiwan_2030_tech_vision.pdf</a></p><br />Python << <a href='Python.html'>Previous</a> <a href='W7.html'>Next</a> >> W7</div>
+    <div id="tipue_search_content">Call for Code << <a href='Call for Code.html'>Previous</a> <a href='Topic2.html'>Next</a> >> Topic2<br /><h1>W8</h1>
+<p>利用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯 <a href="https://revealjs.com/">reveal.js</a> 網際簡報.</p>
+<p>在可攜系統的命令列視窗中輸入 leo, 即可開啟 Leo Editor. 若無法順利開啟 Leo Editor 而且進入視窗表單輸入迴圈, 則可在啟動的 home 目錄下建立一個 .leo 目錄, 且在目錄中建立一個純文字檔案 .leoID.txt 內容為任何字串 (可以使用 leo), 之後再重新啟動可攜系統後, 在命令視窗中輸入 leo 就可以啟動 Leo Editor.</p>
+<h4>Leo Editor 基本操作:</h4>
+<p style="padding-left: 30px;">Ctrl + i : insert node (insert)</p>
+<p style="padding-left: 30px;">Ctrl + r : node 往右移動 (right)</p>
+<p style="padding-left: 30px;">Ctrl + l : node 往左移動 (left)</p>
+<p style="padding-left: 30px;">Ctrl + u: node 往上移動 (up)</p>
+<p style="padding-left: 30px;">Ctrl + d : node 往下移動 (down)</p>
+<p style="padding-left: 30px;">@edit 節點編輯指令</p>
+<p style="padding-left: 30px;">@clean 節點含下屬編輯指令</p>
+<p>Leo Editor 遞迴導入外部程式碼節點程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">c.recursiveImport(
+    dir_ = r'./',
+    # use @clean to parse the associated files
+    kind = '@clean',
+    # if save_at_file = True, @@ will use to protect the source codes
+    safe_at_file = False,
+    theTypes = ['.py']
+)</pre>
+<p>recursiveImport 使用案例:</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/RobotSimulator">https://github.com/mdecourse/RobotSimulator</a> 採用 Python 程式語言開發, 使用者可以在開發目錄中建立一個 Leo Editor 專案擋, 並將上述遞迴節點指令輸入後, 以 Ctrl + b 要求執行後, 便可將程式碼納入 Leo Editor 節點架構中.</p>
+<p>CMSiMDE 網際內容管理系統中內含 reveal.js, 其 .leo 檔案位於 config/reveal.leo, 利用 Leo Editor 開啟後, 可以編輯各 slide 內容. slide 1 - slide 31 代表各種不同簡報內容, 各分組可以自行取捨編輯後在靜態網頁中的 Home -reveal 下拉式功能表中開啟.</p>
+<p>WCMJ2021 reveal.js 簡報: <a href="https://mde.tw/wcmj2021/reveal/">https://mde.tw/wcmj2021/reveal/</a></p>
+<p></p><br />Call for Code << <a href='Call for Code.html'>Previous</a> <a href='Topic2.html'>Next</a> >> Topic2</div>
         
     <!-- footer -->
       <div class="container">

@@ -2229,6 +2229,30 @@ print('Done')</pre>
 <li>New Relic provides Full-Stack Observability and monitoring within the Kubernetes environment</li>
 </ol>
 <p></p>
+<p></p><h2>W8</h2>
+<p>利用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯 <a href="https://revealjs.com/">reveal.js</a> 網際簡報.</p>
+<p>在可攜系統的命令列視窗中輸入 leo, 即可開啟 Leo Editor. 若無法順利開啟 Leo Editor 而且進入視窗表單輸入迴圈, 則可在啟動的 home 目錄下建立一個 .leo 目錄, 且在目錄中建立一個純文字檔案 .leoID.txt 內容為任何字串 (可以使用 leo), 之後再重新啟動可攜系統後, 在命令視窗中輸入 leo 就可以啟動 Leo Editor.</p>
+<h4>Leo Editor 基本操作:</h4>
+<p style="padding-left: 30px;">Ctrl + i : insert node (insert)</p>
+<p style="padding-left: 30px;">Ctrl + r : node 往右移動 (right)</p>
+<p style="padding-left: 30px;">Ctrl + l : node 往左移動 (left)</p>
+<p style="padding-left: 30px;">Ctrl + u: node 往上移動 (up)</p>
+<p style="padding-left: 30px;">Ctrl + d : node 往下移動 (down)</p>
+<p style="padding-left: 30px;">@edit 節點編輯指令</p>
+<p style="padding-left: 30px;">@clean 節點含下屬編輯指令</p>
+<p>Leo Editor 遞迴導入外部程式碼節點程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">c.recursiveImport(
+    dir_ = r'./',
+    # use @clean to parse the associated files
+    kind = '@clean',
+    # if save_at_file = True, @@ will use to protect the source codes
+    safe_at_file = False,
+    theTypes = ['.py']
+)</pre>
+<p>recursiveImport 使用案例:</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/RobotSimulator">https://github.com/mdecourse/RobotSimulator</a> 採用 Python 程式語言開發, 使用者可以在開發目錄中建立一個 Leo Editor 專案擋, 並將上述遞迴節點指令輸入後, 以 Ctrl + b 要求執行後, 便可將程式碼納入 Leo Editor 節點架構中.</p>
+<p>CMSiMDE 網際內容管理系統中內含 reveal.js, 其 .leo 檔案位於 config/reveal.leo, 利用 Leo Editor 開啟後, 可以編輯各 slide 內容. slide 1 - slide 31 代表各種不同簡報內容, 各分組可以自行取捨編輯後在靜態網頁中的 Home -reveal 下拉式功能表中開啟.</p>
+<p>WCMJ2021 reveal.js 簡報: <a href="https://mde.tw/wcmj2021/reveal/">https://mde.tw/wcmj2021/reveal/</a></p>
 <p></p><h2>Topic2</h2>
 <p>學校與系上所提供的軟體套件安裝介紹</p>
 <p style="padding-left: 30px;">Windows 10</p>

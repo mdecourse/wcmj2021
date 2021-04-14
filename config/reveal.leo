@@ -208,20 +208,21 @@ vertical: body pane on the botton</t>
     @others
 &lt;/div&gt;</t>
 <t tx="leo.20200818170328.1">&lt;section&gt;
-    &lt;a href="https://revealjs.com"&gt;
-        &lt;img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"&gt;
+    &lt;a href="https://mde.tw"&gt;
+        &lt;img src="http://mde.tw/lab/images/kmol_1172x340_color_3yrs.png" alt="mde.tw logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="mde.tw-logo"&gt;
     &lt;/a&gt;
-    &lt;h3&gt;The HTML Presentation Framework&lt;/h3&gt;
+    &lt;h3&gt;2021 五專網際內容管理&lt;/h3&gt;
     &lt;p&gt;
-        &lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; and &lt;a href="https://github.com/hakimel/reveal.js/graphs/contributors"&gt;contributors&lt;/a&gt;&lt;/small&gt;
+        &lt;small&gt;Created by &lt;a href="https://mde.tw"&gt;KMOLab&lt;/a&gt;&lt;/small&gt;
     &lt;/p&gt;
 &lt;/section&gt;
 
 </t>
 <t tx="leo.20200818170535.1">&lt;section&gt;
-    &lt;h2&gt;Hello There&lt;/h2&gt;
+    &lt;h2&gt;W8 課程內容&lt;/h2&gt;
     &lt;p&gt;
-        reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+        1. 各分組利用 Leo Editor 建立期中考週的簡報內容.&lt;br /&gt;
+        2. 各分組簡報前必須按下 Ctrl + PrintScreen 鍵啟動 sharex 錄製功能, 結束時再次按下 Ctr. + PrintScreen 進行 mp4 存檔.
     &lt;/p&gt;
 &lt;/section&gt;
 
