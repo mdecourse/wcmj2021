@@ -2260,11 +2260,11 @@ print('Done')</pre>
 <p style="padding-left: 30px;"><a href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-31895-0.pdf">Automated Driving 電子書</a></p>
 <p style="padding-left: 30px;"><a href="https://asia.nikkei.com/Business/Automobiles/Honda-s-self-driving-car-A-smooth-ride-when-all-goes-right">Honda level 3 news</a> (<a href="https://www.electronicdesign.com/markets/automotive/article/21158656/electronic-design-worlds-first-level-3-selfdriving-production-car-now-available-in-japan">Honda Legend</a>)</p>
 <p style="padding-left: 30px;"><a href="/downloads/distributed_intelligent_systems.pdf">distributed_intelligent_systems.pdf</a></p>
-<p style="padding-left: 30px;">Sensing, Action, and Control in Mobile Robotics.pdf</p>
-<p style="padding-left: 30px;">Localization Methods for Mobile Robots.pdf</p>
-<p style="padding-left: 30px;">Localization Methods and an Introduction to Collective Movements.pdf</p>
-<p style="padding-left: 30px;">Collective Movements in Multi-Robot Systems.pdf</p>
-<p style="padding-left: 30px;">Multi-Level Modeling Methods for Swarm Robotic Systems.pdf</p>
+<p style="padding-left: 30px;"><a href="/downloads/Sensing, Action, and Control in Mobile Robotics.pdf">Sensing, Action, and Control in Mobile Robotics.pdf</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/Localization Methods for Mobile Robots.pdf">Localization Methods for Mobile Robots.pdf</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/Localization Methods and an Introduction to Collective Movements.pdf">Localization Methods and an Introduction to Collective Movements.pdf</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/Collective Movements in Multi-Robot Systems.pdf">Collective Movements in Multi-Robot Systems.pdf</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/Multi-Level Modeling Methods for Swarm Robotic Systems.pdf">Multi-Level Modeling Methods for Swarm Robotic Systems.pdf</a></p>
 <p><img alt="" height="620" src="/images/j3016-levels-of-driving-automation-12-10.jpg" width="800"/></p>
 <h4>開源套件:</h4>
 <h4>Webots:</h4>
@@ -2278,7 +2278,66 @@ print('Done')</pre>
 <h4>FEM:</h4>
 <p style="padding-left: 30px;"><a href="https://github.com/Range-Software/range3">https://github.com/Range-Software/range3</a></p>
 <p style="padding-left: 30px;"><a href="https://gitlab.com/akantu">https://gitlab.com/akantu</a> </p>
-<p style="padding-left: 30px;"><a href="https://www.epfl.ch/labs/lsms/wp-content/uploads/2018/10/akantu_ug_v2.3.pdf">https://www.epfl.ch/labs/lsms/wp-content/uploads/2018/10/akantu_ug_v2.3.pdf</a></p><h2>Topic2</h2>
+<p style="padding-left: 30px;"><a href="https://www.epfl.ch/labs/lsms/wp-content/uploads/2018/10/akantu_ug_v2.3.pdf">https://www.epfl.ch/labs/lsms/wp-content/uploads/2018/10/akantu_ug_v2.3.pdf</a></p>
+<h3>Hybrid System</h3>
+<p>當使用下列 start_ipv6.bat 批次檔案啟動隨身系統時, 部分系統檔案放在 C:\, 導致原先採用 Y:\Python39\python.exe 或 Y:\Python39\pythonw.exe 的程式無法順利執行, 其中包括 SciTE 與 Leo Editor. 因應的方式就是要將這些包含絕對目錄設定的內容, 改為採用相對目錄.</p>
+<p>以 SciTE 中的 python.properties 為例, 必須將原先:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
+    #python.command=pyw
+    python.command=y:\python39\pythonw.exe</pre>
+<p>的設定改為:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
+	#python.command=pyw
+	python.command=pythonw.exe</pre>
+<p>至於 leo.exe (位於 Python39/Scripts) 則必須要從 C: 複製一份到 Hybrid 隨身系統的 Y:\, 並且利用 <a href="https://mh-nexus.de/en/hxd/">https://mh-nexus.de/en/hxd/</a> 將 leo.exe 中的 y:\python\pythonw.exe 改為 pythonw.exe.</p>
+<p>經過兩項修改, Hybrid 可攜隨身系統才能正確利用 SciTE 執行 Python 程式, 並且在命令列中以 leo 開啟 Leo Editor.</p>
+<h4>start_ipv6.bat</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+set Local=C:\kmol2021_spring_v3\data
+
+%Disk%:
+
+set HomePath=%Disk%:\home_ipv6
+set HomeDrive=%Disk%:\home_ipv6
+set Home=%Disk%:\home_ipv6
+set USERPROFILE=%Disk%:\home_ipv6
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Local%\Python39\DLLs;%Local%\Python39\Lib;%Local%\Python39\Lib\site-packages;
+
+set PYTHONHOME=%Local%\Python39
+
+set GIT_SSH=%Disk%:\putty\plink.exe
+
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%Local%\Python39;%Local%\Python39\Scripts;
+set path_portablegit=%Local%\Portablegit\bin;
+set path_heroku=%Local%\heroku\bin;
+REM for heroku login
+set HTTP_PROXY=http://[2001:288:6004:17::53]:3128
+set HTTPS_PROXY=http://[2001:288:6004:17::53]:3128
+
+path=%Disk%:;%path_python%;%path_portablegit%;%path_heroku%;%path%;
+
+REM ref: https://drive.google.com/file/d/1S0XYN-1MKxo0KFYxs0pFTcTrr8NL4n1b/view
+
+REGEDIT.EXE /S %Disk%:\putty_github_com.reg;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wScite\SciTE.exe
+start /MIN %Disk%:\wScite\SciTE.exe
+
+Exit</pre>
+<p></p><h2>Topic2</h2>
 <p>學校與系上所提供的軟體套件安裝介紹</p>
 <p style="padding-left: 30px;">Windows 10</p>
 <p style="padding-left: 30px;"><a href="https://2019wcm.blogspot.com/search/label/%E6%A0%A1%E5%9C%92%E8%BB%9F%E9%AB%94">校園軟體</a></p>

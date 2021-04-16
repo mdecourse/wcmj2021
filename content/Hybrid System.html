@@ -133,12 +133,65 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">個人電腦 << <a href='個人電腦.html'>Previous</a> <a href='Switch.html'>Next</a> >> Switch<br /><h1>Network</h1>
-<p><a href="https://searchnetworking.techtarget.com/tip/How-to-calculate-network-bandwidth-requirements">Understanding bandwidth</a><br/><br/>Bandwidth refers to the data rate that is supported by the network connection or the interfaces that connect to the network. It represents both volume and time, representing the amount of data that can be transmitted between two points in a set period of time. It is usually expressed in terms of bits per second (bps), or sometimes in bytes per second (Bps).<br/><br/>Network bandwidth represents the capacity of the network connection, though it's important to understand the distinction between theoretical throughput and real-world results when figuring out the right bandwidth formula for your network. For example, a 1000BASE-T -- which uses unshielded twisted-pair cables -- Gigabit Ethernet (GbE) network can theoretically support 1,000 megabits per second (Mbps), but this level can never really be achieved in practice because of hardware and systems software overhead.<br/><br/>One point to consider when thinking about how to calculate bandwidth needs on your network is this: Bandwidth should not be confused with throughput, which refers to speed. While high-bandwidth networks are often fast, that is not always the case. A helpful metaphor when thinking about bandwidth is cars on a highway. A high-bandwidth network is like a six-lane highway that can fit hundreds of cars at any given moment. A low-bandwidth network is like a single-lane road in which one car queues directly behind another.<br/><br/>Although the large highway is likely to move vehicles faster, rush-hour traffic can easily bring cars and trucks to a standstill. Or, perhaps, the cars cannot get onto the highway quickly because it's clogged with large delivery trucks that take up a lot of space on the road. Similarly, even a high-bandwidth network can run slowly in the face of problems, such as congestion and bandwidth-hungry applications.<br/><br/>These very points make calculating bandwidth requirements a challenge, yet the consequences of getting the bandwidth formula wrong are considerable. If you don't procure enough bandwidth, you all but guarantee the network will run slowly. However, significantly overprovisioning bandwidth can be cost-prohibitive for most enterprises.<br/><br/>So, how do you determine the right formula that will meet your bandwidth requirements? The process begins with asking the right questions: What applications are users running, and what is the performance service-level agreement for these applications? I know some network managers who are only concerned with how many users are on a virtual LAN. What you really need to know is what the users will be doing on the network. It's possible that 200 users will cause less of a bottleneck than a group of three users that really beats the heck out of the network because of some funky client-server application or extensive use of a bandwidth-heavy service, like high-definition video conferencing.</p>
-<p><img alt="" height="318" src="./../images/ethernet_speed_roadmap.jpg" width="600"/></p>
-<p>了解 <a href="https://www.wireshark.org">https://www.wireshark.org</a> 的用法, 並藉以提升網路頻寬的使用效能及安全.</p>
-<p style="padding-left: 30px;">近端下載</p>
-<p><a href="http://a.kmol.info:88/Wireshark-win64-3.4.2.exe">http://a.kmol.info:88/Wireshark-win64-3.4.2.exe</a></p><br />個人電腦 << <a href='個人電腦.html'>Previous</a> <a href='Switch.html'>Next</a> >> Switch</div>
+    <div id="tipue_search_content">W8 << <a href='W8.html'>Previous</a> <a href='Topic2.html'>Next</a> >> Topic2<br /><h1>Hybrid System</h1>
+<p>當使用下列 start_ipv6.bat 批次檔案啟動隨身系統時, 因為部分系統檔案放在 C:\, 導致原先採用 Y:\Python39\python.exe 或 Y:\Python39\pythonw.exe 設定的程式無法順利執行, 其中包括 SciTE 與 Leo Editor. 因應的方式就是要將這些包含絕對目錄設定的內容, 改為採用相對目錄執行 Python.</p>
+<p>以 SciTE 中的 python.properties 為例, 必須將原先:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
+    #python.command=pyw
+    python.command=y:\python39\pythonw.exe</pre>
+<p>的設定改為:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
+	#python.command=pyw
+	python.command=pythonw.exe</pre>
+<p>至於 leo.exe (位於 Python39/Scripts) 則必須要從 C: 複製一份到 Hybrid 隨身系統的 Y:\, 並且利用 <a href="https://mh-nexus.de/en/hxd/">https://mh-nexus.de/en/hxd/</a> 將 leo.exe 中的 y:\python\pythonw.exe 改為 pythonw.exe.</p>
+<p>經過兩項修改, Hybrid 可攜隨身系統才能正確利用 SciTE 執行 Python 程式, 並且在命令列中以 leo 開啟 Leo Editor.</p>
+<h4>start_ipv6.bat</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+set Local=C:\kmol2021_spring_v3\data
+
+%Disk%:
+
+set HomePath=%Disk%:\home_ipv6
+set HomeDrive=%Disk%:\home_ipv6
+set Home=%Disk%:\home_ipv6
+set USERPROFILE=%Disk%:\home_ipv6
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Local%\Python39\DLLs;%Local%\Python39\Lib;%Local%\Python39\Lib\site-packages;
+
+set PYTHONHOME=%Local%\Python39
+
+set GIT_SSH=%Disk%:\putty\plink.exe
+
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%Local%\Python39;%Local%\Python39\Scripts;
+set path_portablegit=%Local%\Portablegit\bin;
+set path_heroku=%Local%\heroku\bin;
+REM for heroku login
+set HTTP_PROXY=http://[2001:288:6004:17::53]:3128
+set HTTPS_PROXY=http://[2001:288:6004:17::53]:3128
+
+path=%Disk%:;%path_python%;%path_portablegit%;%path_heroku%;%path%;
+
+REM ref: https://drive.google.com/file/d/1S0XYN-1MKxo0KFYxs0pFTcTrr8NL4n1b/view
+
+REGEDIT.EXE /S %Disk%:\putty_github_com.reg;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wScite\SciTE.exe
+start /MIN %Disk%:\wScite\SciTE.exe
+
+Exit</pre>
+<p></p><br />W8 << <a href='W8.html'>Previous</a> <a href='Topic2.html'>Next</a> >> Topic2</div>
         
     <!-- footer -->
       <div class="container">
