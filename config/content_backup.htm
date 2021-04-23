@@ -2280,7 +2280,7 @@ print('Done')</pre>
 <p style="padding-left: 30px;"><a href="https://gitlab.com/akantu">https://gitlab.com/akantu</a> </p>
 <p style="padding-left: 30px;"><a href="https://www.epfl.ch/labs/lsms/wp-content/uploads/2018/10/akantu_ug_v2.3.pdf">https://www.epfl.ch/labs/lsms/wp-content/uploads/2018/10/akantu_ug_v2.3.pdf</a></p>
 <h3>Hybrid System</h3>
-<p>當使用下列 start_ipv6.bat 批次檔案啟動隨身系統時, 部分系統檔案放在 C:\, 導致原先採用 Y:\Python39\python.exe 或 Y:\Python39\pythonw.exe 的程式無法順利執行, 其中包括 SciTE 與 Leo Editor. 因應的方式就是要將這些包含絕對目錄設定的內容, 改為採用相對目錄.</p>
+<p>當使用下列 start_ipv6.bat 批次檔案啟動隨身系統時, 因為部分系統檔案放在 C:\, 導致原先採用 Y:\Python39\python.exe 或 Y:\Python39\pythonw.exe 設定的程式無法順利執行, 其中包括 pip (位於 Python39\Scripts), SciTE 與 Leo Editor. 因應的方式就是要將這些包含絕對目錄設定的內容, 改為採用相對目錄執行 Python.</p>
 <p>以 SciTE 中的 python.properties 為例, 必須將原先:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
     #python.command=pyw
@@ -2289,8 +2289,8 @@ print('Done')</pre>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
 	#python.command=pyw
 	python.command=pythonw.exe</pre>
-<p>至於 leo.exe (位於 Python39/Scripts) 則必須要從 C: 複製一份到 Hybrid 隨身系統的 Y:\, 並且利用 <a href="https://mh-nexus.de/en/hxd/">https://mh-nexus.de/en/hxd/</a> 將 leo.exe 中的 y:\python\pythonw.exe 改為 pythonw.exe.</p>
-<p>經過兩項修改, Hybrid 可攜隨身系統才能正確利用 SciTE 執行 Python 程式, 並且在命令列中以 leo 開啟 Leo Editor.</p>
+<p>至於 pip.exe 與 leo.exe (位於 Python39/Scripts) 則必須要從 C: 複製一份到 Hybrid 隨身系統的 Y:\, 並且利用 <a href="https://mh-nexus.de/en/hxd/">https://mh-nexus.de/en/hxd/</a> 將 pip.exe 中的 y:\python\python.exe 改為 python.exe, 以及將 leo.exe 中的 y:\python\pythonw.exe 改為 pythonw.exe.</p>
+<p>經過兩項修改, Hybrid 可攜隨身系統才能正確利用 SciTE 執行 Python 程式, 並且在命令列中以 pip 進行模組安裝, 以 leo 開啟 Leo Editor.</p>
 <h4>start_ipv6.bat</h4>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
 set Disk=y
