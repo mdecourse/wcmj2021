@@ -2,7 +2,7 @@
         <head>
         <title>WCMJ2021</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,22 +134,32 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Switch << <a href='Switch.html'>Previous</a> <a href='Topic 1.html'>Next</a> >> Topic 1<br /><h1>Topics</h1>
-<p>個人電腦軟體與硬體基本概念</p>
-<p>網路基本概念與設定</p>
-<p>Windows 10 64 位元隨身程式系統</p>
-<p><a href="http://mde.tw">http://mde.tw</a></p>
-<p>cmsimde</p>
-<p>blogger</p>
-<p>Github</p>
-<p>Fossil SCM</p>
-<p><a href="http://fossil.kmol.info">http://fossil.kmol.info</a></p>
-<p style="padding-left: 30px;"><a href="http://mde.tw/fosgit">http://mde.tw/fosgit</a></p>
-<p style="padding-left: 30px;"><a href="http://fossil.kmol.info/fosgit/doc/trunk/index.html">http://fossil.kmol.info/fosgit/doc/trunk/index.html</a></p>
-<p style="padding-left: 30px;"><a href="https://fossil.kmol.info/fosgit/doc/0f7bf53ab9/content/index.html">https://fossil.kmol.info/fosgit/doc/0f7bf53ab9/content/index.html</a></p>
-<p><a href="http://jpme.eng.nfu.edu.tw">http://jpme.eng.nfu.edu.tw</a></p>
-<p></p>
-<br />Switch << <a href='Switch.html'>Previous</a> <a href='Topic 1.html'>Next</a> >> Topic 1</div>
+    <div id="tipue_search_content">分組專題 << <a href='分組專題.html'>Previous</a> <a href='實體 Ubuntu Desktop 安裝.html'>Next</a> >> 實體 Ubuntu Desktop 安裝<br /><h1>實體 Win10 安裝</h1>
+<p>實體 Windows 10 64 位元電腦安裝與配置應用 (Ram 16 GB 電腦, 可以在其中安裝 Virtualbox 再安裝其他操作系統)</p>
+<p>From <a href="https://www.freecodecamp.org/news/uefi-vs-bios/">https://www.freecodecamp.org/news/uefi-vs-bios/</a></p>
+<p>BIOS stands for Basic Input/Output System which is the firmware for the boot procedure. It is stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily.</p>
+<p>UEFI stands for Unified Extensible Firmware Interface. It does the same job as a BIOS, but with one basic difference: it stores all data about initialization and startup in an .efi file, instead of storing it on the firmware. This .efi file is stored on a special partition called EFI System Partition (ESP) on the hard disk. This ESP partition also contains the bootloader.</p>
+<p>UEFI was designed to overcome many limitations of the old BIOS, including:</p>
+<ol>
+<li>UEFI supports <span style="background-color: #ffff99;">drive sizes upto 9 zettabytes (=9x1000^^3 terra<a href="https://en.wikipedia.org/wiki/Byte">bytes</a>)</span>, whereas BIOS only supports 2.2 terabytes.</li>
+<li>UEFI provides <span style="background-color: #ffff99;">faster boot time</span>.</li>
+<li>UEFI has <span style="background-color: #ffff99;">discrete driver support</span>, while BIOS has drive support stored in its ROM, so updating BIOS firmware is a bit difficult.</li>
+<li>UEFI offers security like "<span style="background-color: #ffff99;">Secure Boot</span>", which prevents the computer from booting from unauthorized/unsigned applications. This helps in preventing rootkits, but also hampers dual-booting, as it treats other OS as unsigned applications. Currently, only Windows and Ubuntu are signed OS.</li>
+<li>UEFI runs in 32bit or 64bit mode, whereas BIOS runs in 16bit mode. So UEFI  is able to provide a <span style="background-color: #ffff99;">GUI</span> (navigation with mouse) as opposed to BIOS which allows navigation only using the keyboard.</li>
+</ol>
+<h4>完成 Windows 10 安裝後：</h4>
+<ol>
+<li>自行配置能夠用來啟動 <a href="https://github.com/mdecourse/cmstemplate">cmstermplate</a> 網站的 Python 系統</li>
+<li>自行安裝 <a href="https://gitforwindows.org/">Git</a> 並配置 <a href="https://github.com/mdecourse/cmstemplate">SciTE,</a> 令其可以執行版次管理並在 <a href="https://github.com/mdecourse/cmstemplate">SciTE</a> 環境中解譯 Python3 程式.</li>
+<li>自行設定 <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">SSH</a> 讓各組員可以利用不同帳號登入 Windows 後進行靜態網頁的 Github 倉儲改版 (或者, 採隨身碟設定, 讓各組員可以透過隨身碟共用 Windows 10 操作系統).</li>
+<li>自行安裝 <a href="https://robodk.com/">RoboDK</a> 與 <a href="https://www.parallemic.org/RoKiSim.html">RoKSim</a>, 利用 <a href="https://github.com/mdecourse/cmstemplate">SciTE</a> 設定執行 <a href="./../downloads/RoboDK/pick_and_place/pick_and_place.py">Pick and Place Python</a> 操控 RoboDK 範例.</li>
+<li>從 <a href="http://mde.tw/cad2020/content/HW3.html">http://mde.tw/cad2020/content/HW3.html</a> 中的 Solidworks 機械手臂零組件中, 了解如何自行設定六軸機械手臂的座標轉換矩陣, 如何透過正運動學 (<a href="https://en.wikipedia.org/wiki/Forward_kinematics">Forward Kinematics)</a> 與逆運動學 (<a href="https://en.wikipedia.org/wiki/Inverse_kinematics">Inverse Kinematics</a>), 控制機械臂端點的工具, 完成各項自動化製造程序所需的任務.</li>
+</ol>
+<h4>參考資料：</h4>
+<p style="padding-left: 30px;"><a href="https://www.asus.com/tw/support/FAQ/1039507/">建立 Windows 10 安裝 USB 隨身碟</a></p>
+<p style="padding-left: 30px;"><a href="https://ofeyhong.pixnet.net/blog/post/192436501">Windows 10 安裝教學</a></p>
+<p style="padding-left: 30px;"><a href="https://ofeyhong.pixnet.net/blog/post/192436501">UEFI 與 BIOS 差異</a></p>
+<p style="padding-left: 30px;"><a href="https://2019wcm.blogspot.com/search/label/%E6%A0%A1%E5%9C%92%E8%BB%9F%E9%AB%94">校園軟體與電腦管理</a></p><br />分組專題 << <a href='分組專題.html'>Previous</a> <a href='實體 Ubuntu Desktop 安裝.html'>Next</a> >> 實體 Ubuntu Desktop 安裝</div>
         
     <!-- footer -->
       <div class="container">
