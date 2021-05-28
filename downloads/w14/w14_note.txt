@@ -1,0 +1,26 @@
+gitlab sign up
+
+https://github.com/mdecourse/cmstemplate
+
+http://mde.tw/wcm2021/content/Gitlab 同步.html
+
+.gitlab-ci.yml
+
+
+
+pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  
+  
+git remote add gitlab git@pj2022:pj2022/w14demo.git
