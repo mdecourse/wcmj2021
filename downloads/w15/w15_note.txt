@@ -1,0 +1,7 @@
+https://fossil.kmol.info:3443
+
+y:\tmp\wcmj2021>git remote add fossil http://fossil.kmol.info:3000/帳號/wcmj2021.git
+
+y:\tmp\wcmj2021>git push fossil
+
+https://fossil.kmol.info:3443/帳號/wcmj2021.git
