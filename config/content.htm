@@ -2868,7 +2868,7 @@ while idTake &gt;= 0:
     robot.MoveJ(target_app_frame)
  
 # Move home when the robot finishes
-robot.MoveJ([0,0,0,0,10,-200])</pre><h2>W14-W15</h2>
+robot.MoveJ([0,0,0,0,10,-200])</pre><h2>W14-W16</h2>
 <p><a href="https://drive.google.com/file/d/1C11tONio7oxug0lJlTiyZPOsA_6d4c_u/view?usp=sharing">W14 第一段線上教學影片</a></p>
 <p><a href="https://drive.google.com/file/d/1GWndoMMU4r2j_i0SJMMjTSW_YrHKXJre/view?usp=sharing">W14 第二段線上教學影片</a> (在 Github 建立 w14demo 倉儲,  然後設法透過 SSH 將倉儲內容同步至 Gitlab)</p>
 <p>Gitlab 為了防止使用者濫用 CI/CD 服務進行挖礦, 因此 2021/5/17 之後建立帳號者, 若要使用 CI/CD 服務, 必須提供信用卡資料, 因此先前將 CMSiMDE Github Pages 靜態網頁同步至 Gitlab Pages 的方法, 已經不再適用.</p>
@@ -2882,6 +2882,24 @@ robot.MoveJ([0,0,0,0,10,-200])</pre><h2>W14-W15</h2>
 <p>5. 請各學員在 Gitlab 利用 SSH 協定, 建立個人在 Github 課程倉儲的同步倉儲, 並利用 <a href="https://docs.gitlab.com/ee/user/project/pages/">Gitlab Pages</a> 呈現個人與分組同步網站.</p>
 <h4>W15 議題:</h4>
 <p style="padding-left: 30px;">請各組學員在 W15 課程時間內, 號召組員進行一段 30 分種的線上會議 (採 Google Meet 或 OBS + Youtube) 並全程錄影, 整理至今各組員所完成的課程內容項目與所遭遇問題, 完成後請將討論議題與結果存入各分組網站後, 將個人課程成果與分組網站上的 W15 頁面連結與影片連結登錄至 <a href="https://github.com/mdecourse/wcmj2021/discussions/16">W13-W14 任務執行回報區</a>.</p>
+<h4>W16:</h4>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1TEw6HAEJxKfyI-5BMDg3ywhKZaEwdYvr/view?usp=sharing">W16 第一段線上教學影片</a></p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1CtOrRMUQy7bYiNr6wkyK3e5En7Pl8CpT/view?usp=sharing">W16 第二段線上教學影片</a></p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1Wn8hfrNlm3MlqZYjgC1raC4i0ehTwTyt/view?usp=sharing">W16 第三段線上教學影片</a></p>
+<h4 style="padding-left: 30px;">第一台靜態網頁主機:</h4>
+<p style="padding-left: 60px;">利用 heroku6 At mde 建立 (1/5)</p>
+<p style="padding-left: 60px;">Github 倉儲: <a href="https://github.com/heroku6/wcmw16.git">https://github.com/heroku6/wcmw16.git</a> </p>
+<p style="padding-left: 60px;">下載可攜 heroku cli 之後, 設定可攜程式啟動之命令搜尋路徑, 讓 heroku 可以在任何隨身系統的目錄中執行.</p>
+<p style="padding-left: 60px;">heroku login 後, y:\home 目錄中會新增一個代表登入帳號身分的 _netrc 檔案.</p>
+<p style="padding-left: 60px;">以下則利用倉儲中的 index.php 讓 cmstemplate 靜態網頁可以在 <a href="http://wcmw16.herokuapp.com/">http://wcmw16.herokuapp.com/</a> 中伺服. 且此一倉儲, 可以在  heroku login 成功登入授權者帳號後, 以 git clone --recurse-submodules <a href="https://git.heroku.com/wcmw16.git">https://git.heroku.com/wcmw16.git</a>  取下倉儲檔案.</p>
+<h4 style="padding-left: 30px;">第二台動態網頁主機:</h4>
+<p style="padding-left: 60px;">利用 heroku6 At mde 建立 (2/5)</p>
+<p style="padding-left: 60px;">Github 倉儲: <a href="https://github.com/heroku6/wcmapp.git">https://github.com/heroku6/wcmapp.git</a> </p>
+<p style="padding-left: 60px;">主機建立流程均如上列第三部影片中所示, 唯一的差別是 Procfile 必須設定為:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">web: gunicorn --chdir cmsimde flaskapp:app</pre>
+<p style="padding-left: 60px;">表示要令 gunicorn 進入 cmsimde 目錄後, 再透過 flaskapp.py 檔案中的 app 物件變數啟動網站. 所完成的網站: <a href="https://wcmapp.herokuapp.com/">https://wcmapp.herokuapp.com/</a>, 但由於不具備 persistent 儲存檔案功能, 此動態網站只能展示動態網頁的基本功能, 內容無法修改存檔. 此一倉儲, 可以在  heroku login 成功登入授權者帳號後, 以 git clone --recurse-submodules <a href="https://git.heroku.com/wcmapp.git">https://git.heroku.com/wcmapp.git</a> 取下倉儲檔案.</p>
+<p style="padding-left: 60px;"></p>
+<p style="padding-left: 60px;"></p>
 <p></p><h1>分組專題</h1>
 <h4>分組專題影片回報與討論區:</h4>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecourse/wcmj2021/discussions/10">https://github.com/mdecourse/wcmj2021/discussions/10</a></p>
